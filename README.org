@@ -1,4 +1,4 @@
-* Fundamentals
+* Domain-Driven Design Fundamentals
 
 ** Sub-domains
 ** Bounded Contexts
@@ -16,3 +16,28 @@
 ** Domain Events
 ** Domain Event Boundaries
 ** Message Queues, Events, and Services
+* Domain-Driven Design: Tackling Complexity in the Heart of Software
+** Putting the Domain Model to Work
+*** Crunching Knowledge
+*** Communication and the Use of Language
+*** Binding Model and Implementation
+** The Building Blocks of a Model-Driven Design
+*** Isolating the Domain
+*** A Model Expressed in Software
+*** The Life Cycle of a Domain Object
+*** Using the Language: An Extended Example
+** Refactoring Toward Deeper Insight
+*** Breakthrough
+*** Making Implicit Concepts Explicit
+*** Supple Design
+*** Applying Analysis Patterns
+*** Relating Design Patterns to the Model
+*** Refactoring Toward Deeper Insight
+** Strategic Design
+*** Maintaining Model Integrity
+*** Distillation
+*** Large-Scale Structure
+*** Bringing the Strategy Together
+** Conclusion
+*** Appendix. The Use of Patterns in This Book
+*** Glossary
