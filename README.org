@@ -1,3 +1,119 @@
+* Domain-Driven Design: Tackling Complexity in the Heart of Software
+** Putting the Domain Model to Work
+*** 1. Crunching Knowledge
+
+- Binding the model and the implementation. That
+- Cultivating a language based on the model.
+- Developing a knowledge-rich model.
+- Distilling the model.
+
+Eric, Evans. Domain-Driven Design (p. 13). Pearson Education. Kindle Edition.
+
+
+#+begin_src typescript
+  class Cargo {
+      size: number;
+  }
+
+  class Voyage {
+      capacity: number;
+  }
+
+  class OverbookingPolicy {
+      isAllowed(cargo: Cargo, voyage: Voyage) {
+          cargo.size()
+      }
+  }
+
+  const makeBooking = (cargo: Cargo, voyage: Voyage) => {
+      const maxBooking: number = voyage.capacity * 1.1;
+  }
+#+end_src
+
+- Policy is STRATEGY
+
+- cargo_bookings
+
+| cargo_id | transport | load | unload |
+
+
+*** 2. Communication and the Use of Language
+
+Examples for the Onboarding model would include all of the tasks and dependencies.
+
+#+begin_src typescript
+  class RoutingService {
+
+  }
+
+  class Itinerary {
+
+  }
+
+  class RouteSpecification {
+
+  }
+#+end_src
+
+*** 3. Binding Model and Implementation
+** The Building Blocks of a Model-Driven Design
+*** 4. Isolating the Domain
+
+- ui (web)
+- app (http)
+- domain (fetch and transform)
+- infrastructure (services)
+
+*** 5. A Model Expressed in Software
+
+- entities
+
+*** 6. The Life Cycle of a Domain Object
+
+#+begin_quote
+A REPOSITORY uses a FACTORY to reconstitute a preexisting object.
+
+Eric, Evans. Domain-Driven Design (p. 158). Pearson Education. Kindle Edition.
+#+end_quote
+
+- https://github.com/apollographql/federation-demo
+
+
+#+begin_src c++
+public Cargo(String id) {
+    trackingID = id;
+    deliveryHistory = new DeliveryHistory(this);
+    customerRoles = new HashMap();
+}
+
+#+end_src
+
+#+begin_src c++
+public HandlingEvent(Cargo c, String eventType, Date timeStamp) {
+    handled = c;
+    type = eventType;
+    completionTime = timeStamp;
+}
+
+#+end_src
+
+*** 7. Using the Language: An Extended Example
+** Refactoring Toward Deeper Insight
+*** 8. Breakthrough
+*** 9. Making Implicit Concepts Explicit
+*** 10. Supple Design
+*** 11. Applying Analysis Patterns
+*** 12. Relating Design Patterns to the Model
+*** 13. Refactoring Toward Deeper Insight
+** Strategic Design
+*** 14. Maintaining Model Integrity
+*** 15. Distillation
+*** 16. Large-Scale Structure
+*** 17. Bringing the Strategy Together
+** Conclusion
+*** Appendix. The Use of Patterns in This Book
+*** Glossary
+
 * Domain-Driven Design Fundamentals
 
 ** Sub-domains
@@ -16,32 +132,6 @@
 ** Domain Events
 ** Domain Event Boundaries
 ** Message Queues, Events, and Services
-* Domain-Driven Design: Tackling Complexity in the Heart of Software
-** Putting the Domain Model to Work
-*** Crunching Knowledge
-*** Communication and the Use of Language
-*** Binding Model and Implementation
-** The Building Blocks of a Model-Driven Design
-*** Isolating the Domain
-*** A Model Expressed in Software
-*** The Life Cycle of a Domain Object
-*** Using the Language: An Extended Example
-** Refactoring Toward Deeper Insight
-*** Breakthrough
-*** Making Implicit Concepts Explicit
-*** Supple Design
-*** Applying Analysis Patterns
-*** Relating Design Patterns to the Model
-*** Refactoring Toward Deeper Insight
-** Strategic Design
-*** Maintaining Model Integrity
-*** Distillation
-*** Large-Scale Structure
-*** Bringing the Strategy Together
-** Conclusion
-*** Appendix. The Use of Patterns in This Book
-*** Glossary
-
 * Domain-Driven Design Reference
 
 - https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf
@@ -50,3 +140,7 @@
 
 - https://docs.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice
 - https://www.domainlanguage.com/ddd/
+
+** Videos
+
+- https://www.youtube.com/watch?v=U6CeaA-Phqo
